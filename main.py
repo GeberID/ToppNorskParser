@@ -24,6 +24,8 @@ class Driver:
         try:
             for i in range(1000):
                 try:
+#Передаем в переменные найденные слова и выражения и из выражения удаляем ранее найденное слово.
+#Потому что в выражение парсится слово - выражение и для добавления в словарь нам это не нужно
                     self.word=(self.driver.find_element(By.XPATH,f'/html/body/div[1]/div/div[1]/main/article/div/div/p[{i+2}]/strong').text)
                     self.definition=(self.driver.find_element(By.XPATH,f'/html/body/div[1]/div/div[1]/main/article/div/div/p[{i+2}]').text)
                     self.definition.replace(self.word,'')
