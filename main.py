@@ -97,7 +97,7 @@ class Driver:
 
 
 parseSite = Driver();
-parseSite.goToTheSite("https://toppnorsk.com/2021/10/24/stor-samling-norske-uttrykk/")
+site = input("Set URL")
 try:
     parseSite.findWords()
     # fixture.printWordList()
